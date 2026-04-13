@@ -4,10 +4,10 @@ import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 import joblib
 
-file_path = "df_trimmed.xlsx"
+file_path = "df_fix_trimmed.xlsx"
 df_bdv = pd.read_excel(file_path, sheet_name=0)
 
-X_bdv = df_bdv[['moisture']]
+X_bdv = df_bdv[['moisture','temp','estimated_temp','interaction']]
 y_bdv = df_bdv['bdv']
 
 # model
